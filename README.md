@@ -1,117 +1,50 @@
 # Séquencia
-### Préparer, enrichir et suivre ses cours avec l’IA
 
-**Un outil métier développé à partir de mon activité d’enseignant.**
+### Préparez. Projetez. Reprenez.
 
-Séquencia, développé sous le nom de projet Cours-collège, rassemble les chapitres, séances et documents pédagogiques, avec un suivi distinct pour chaque classe. L’IA intervient dans la préparation et la révision des supports, au sein du contexte de travail de l’enseignant.
+Vos séances, vos documents et l’avancement de chaque classe, au même endroit. Avec l’IA pour préparer vos supports, et la main sur le résultat.
 
-Ce dépôt présente le projet, ses fonctionnalités et son architecture. Le code source de l’application est privé.
+**[Découvrir l’application →](https://cours-college.vercel.app/presentation)** · [Captures réelles](GALERIE.md) · [Architecture](ARCHITECTURE.md)
 
-[Architecture](ARCHITECTURE.md) · [Galerie des captures](GALERIE.md) · [Contacter Henri sur LinkedIn](https://www.linkedin.com/in/henri-teinturier/)
-
-## Technologies et hébergement
-
-**TanStack Start · React · TypeScript · PostgreSQL · OpenAI**
-
-| Composant | Architecture actuelle | Évolution prévue |
-|---|---|---|
-| Framework et interface | TanStack Start, TanStack Router et React | Conservation de cette base applicative |
-| Langages et présentation | TypeScript, HTML et CSS | — |
-| Serveur et construction | Node.js, Vite et Nitro | Déploiement de l’application sur VPS |
-| Base de données | PostgreSQL hébergé sur Neon | PostgreSQL hébergé sur le même VPS que l’application |
-| Documents et images | Ressources intégrées au serveur et fichiers importés ou générés conservés en base | Stockage objet compatible S3 ; hébergement sur le même VPS envisagé pendant la bêta |
-| Hébergement de l’application | Vercel | VPS commun avec PostgreSQL |
-| Intelligence artificielle | API OpenAI appelée côté serveur | — |
-| Production des PDF | Chromium/Puppeteer et pdf-lib | — |
-
-La migration VPS et le stockage compatible S3 constituent l’architecture cible. Le service de stockage S3 auto-hébergé reste à choisir.
-
-Les données structurées restent dans PostgreSQL ; la cible S3 concerne les fichiers des documents et les images.
-
-## Le besoin
-
-Préparer un chapitre demande de rassembler cours, exercices, corrections et évaluations, puis de les adapter aux séances et de suivre leur avancement selon les classes.
-
-J’ai conçu cette application pour regrouper ces éléments et pouvoir les faire évoluer au même endroit : organisation, consultation, création de supports, projection et partage.
-
-## Ce que permet l’application
-
-- **Organiser** les chapitres en séances, parties et ressources.
-- **Suivre** l’avancement, les bilans et les prochaines étapes de chaque classe.
-- **Créer avec l’IA** un cours, une fiche d’exercices, une évaluation ou une correction, avec ou sans document de référence.
-- **Réviser avec l’IA** un document en donnant une consigne, en ajoutant une image ou en sélectionnant une zone.
-- **Choisir la portée d’une modification** : mettre à jour les utilisations communes du document ou créer une copie pour une partie.
-- **Projeter en classe** les supports destinés aux élèves, en masquant les documents réservés au professeur.
-- **Partager un chapitre** en lecture seule avec un autre enseignant, sans son suivi classe par classe.
-- **Utiliser des quiz HTML** exportés depuis Quizlio.
-
-## L’IA intégrée au travail de préparation
-
-### D’une évaluation à une correction retravaillée
-
-**1. Choisir le document de référence et le résultat attendu.**
-
-![Préparation d’un corrigé à partir d’une évaluation de géométrie](assets/12-sequencia-creation-correction.png)
-
-Dans cet exemple, l’enseignant sélectionne une évaluation de géométrie de sixième comme référence, choisit le type « Corrigé » et donne un titre au nouveau document. Le contexte du chapitre, de la séance et de la classe accompagne automatiquement la demande.
-
-**2. Affiner la proposition en conservant le contexte.**
-
-![Deuxième proposition de correction après demande de réintégration des schémas](assets/13-sequencia-correction-resultat.png)
-
-Une première correction est générée. L’enseignant demande ensuite de reprendre les schémas d’origine pour rendre la correction plus claire. L’application affiche une deuxième proposition, son aperçu PDF et les versions disponibles.
-
-**3. Relire, choisir et enregistrer.**
-
-Le résultat peut être consulté en HTML ou en PDF. L’enseignant choisit la proposition à retenir, puis enregistre le nouveau document dans le chapitre. La capture montre la proposition prête à être validée ; elle précède l’enregistrement final.
-
-### Réviser un document avec son contexte
-
-L’enseignant peut également sélectionner une zone du support, joindre des images et préciser la modification attendue. Les échanges successifs et les versions permettent de retravailler la proposition avant de choisir celle à enregistrer.
-
-[Voir la sélection d’une zone dans l’interface précédente](assets/02-revision-ia-zone.png)
-
-### Garder la maîtrise des documents partagés
-
-Un même document peut être utilisé dans plusieurs parties. L’application permet de choisir entre une modification commune et une copie propre à une partie. Cette décision intervient avant la validation du résultat.
-
-[Voir le choix de la portée d’une modification dans l’interface précédente](assets/04-portee-modification.png)
+![Séquencia : un chapitre organisé, deux séances terminées et la suivante prête à reprendre.](assets/showcase/vue-ensemble-v1.png)
 
 ## De la préparation à la classe
 
-| Situation | Fonctionnement |
-|---|---|
-| Préparer le chapitre | Séances, documents, corrections et soutiens regroupés dans un espace commun. |
-| Suivre plusieurs classes | Vue d’ensemble des progressions et suivi propre à la classe sélectionnée. |
-| Présenter un support | Aperçu intégré et mode projection qui masque les ressources réservées au professeur. |
-| Partager avec un collègue | Chapitre en lecture seule, avec les documents autorisés, sans le suivi des classes. |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/showcase/preparer-ia-v1.png" alt="Créer un corrigé avec l’IA à partir de son évaluation et de sa consigne." width="100%" />
+      <h3>Préparer avec l’IA</h3>
+      <p>Partez de vos documents pour créer exercices, évaluations et corrigés.</p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/showcase/relire-corrige-v1.png" alt="Ajuster une proposition de corrigé, consulter ses schémas et choisir la version à enregistrer." width="100%" />
+      <h3>Garder la main</h3>
+      <p>Précisez votre demande, relisez la proposition et choisissez ce que vous enregistrez.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/showcase/quiz-classe-v1.png" alt="Projeter un quiz de géométrie avec une grande figure et des réponses lisibles." width="100%" />
+      <h3>Faire participer la classe</h3>
+      <p>Ouvrez vos supports et vos quiz HTML, puis affichez la correction ensemble.</p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/showcase/partager-chapitre-v1.png" alt="Partager un chapitre et ses documents avec un collègue grâce à un lien en lecture seule." width="100%" />
+      <h3>Partager avec un collègue</h3>
+      <p>Transmettez un chapitre en lecture seule, sans partager le suivi de vos classes.</p>
+    </td>
+  </tr>
+</table>
 
-[Vue actuelle de l’application](assets/10-sequencia-application.png) · [Page de présentation de Séquencia](assets/11-sequencia-presentation.png)
+<sub>Visuels recomposés pour illustrer les usages de Séquencia. Les quiz Quizlio sont importés en HTML.</sub>
 
-Les vues de projection, partage et édition de l’interface précédente sont conservées dans la [galerie complémentaire](GALERIE.md).
+---
 
-## Le lien avec Quizlio
+Conçu et développé par **[Henri Teinturier](https://github.com/HenriTeinturier)** à partir de son activité d’enseignant.
 
-[Voir un exemple de quiz HTML exporté de Quizlio, dans sa présentation précédente](assets/07-quiz-quizlio.png)
+**React · TypeScript · TanStack Start · PostgreSQL · OpenAI**
 
-Les quiz exportés en HTML depuis Quizlio peuvent être utilisés dans Séquencia. Dans le parcours décrit ici, Séquencia peut également préparer un contenu au format attendu par Quizlio ; le transfert reste manuel.
+En développement et utilisé en cours · Accès sur invitation · Code source privé
 
-La connexion automatique entre les deux applications est une évolution prévue. Le visuel présente un quiz exporté, pas l’éditeur Quizlio.
-
-## Ma contribution
-
-Je définis le besoin à partir de mon usage d’enseignant, organise les fonctionnalités et développe l’application avec l’appui de Codex et Claude Code. Je pilote les choix de fonctionnement, l’intégration de l’IA et les ajustements issus de l’utilisation.
-
-Ce projet associe conception d’un outil métier, développement web, intégration d’API, gestion documentaire et attention portée au contrôle laissé à l’utilisateur.
-
-## État du projet
-
-Application personnelle en développement et utilisée pour mon activité d’enseignant. Les captures principales montrent la nouvelle identité Séquencia, sa page de présentation et un exemple réel de création de correction avec l’IA. Les anciennes vues « Carnet · Mathématiques » sont conservées comme compléments identifiés dans la galerie.
-
-Les fonctionnalités disponibles et les évolutions prévues sont distinguées dans cette présentation.
-
-## Contact
-
-**Henri Teinturier — IA, automatisation et applications métier**
-
-[Échanger sur LinkedIn](https://www.linkedin.com/in/henri-teinturier/) · [Profil GitHub](https://github.com/HenriTeinturier)
+[Visiter Séquencia →](https://cours-college.vercel.app/presentation) · [Échanger sur LinkedIn](https://www.linkedin.com/in/henri-teinturier/)
