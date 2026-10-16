@@ -2,42 +2,32 @@
 
 ### Préparez. Projetez. Reprenez.
 
-Vos séances, vos documents et l’avancement de chaque classe, au même endroit. Avec l’IA pour préparer vos supports, et la main sur le résultat.
+Vos séances, vos documents et l’avancement de chaque classe, au même endroit. Utilisée tous les jours en classe. L’IA aide à créer ou retoucher un document, et vous gardez la main sur le résultat.
 
 **[Découvrir l’application →](https://cours-college.vercel.app/presentation)** · [Captures réelles](GALERIE.md) · [Architecture](ARCHITECTURE.md)
 
-![Séquencia : un chapitre organisé, deux séances terminées et la suivante prête à reprendre.](assets/showcase/vue-ensemble-v1.png)
+![Séquencia : une séance et tous ses documents (cours, quiz, exercices, corrections), prêts à ouvrir et à projeter en classe.](assets/sequencia-1-seance-a-portee-de-main-selection-1200x627.png)
 
-## De la préparation à la classe
+## Au quotidien
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="assets/showcase/preparer-ia-v1.png" alt="Créer un corrigé avec l’IA à partir de son évaluation et de sa consigne." width="100%" />
-      <h3>Préparer avec l’IA</h3>
-      <p>Partez de vos documents pour créer exercices, évaluations et corrigés.</p>
+      <img src="assets/sequencia-2-deux-rythmes-selection-1200x627.png" alt="Vue d’ensemble : l’avancement de deux classes sur le même chapitre, séance par séance." width="100%" />
+      <h3>Suivre chaque classe</h3>
+      <p>Chaque classe avance à son rythme : la dernière séance, la suivante et l’état de chaque séance restent visibles.</p>
     </td>
     <td width="50%" valign="top">
-      <img src="assets/showcase/relire-corrige-v1.png" alt="Ajuster une proposition de corrigé, consulter ses schémas et choisir la version à enregistrer." width="100%" />
-      <h3>Garder la main</h3>
-      <p>Précisez votre demande, relisez la proposition et choisissez ce que vous enregistrez.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/showcase/quiz-classe-v1.png" alt="Projeter un quiz de géométrie avec une grande figure et des réponses lisibles." width="100%" />
-      <h3>Faire participer la classe</h3>
-      <p>Ouvrez vos supports et vos quiz HTML, puis affichez la correction ensemble.</p>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/showcase/partager-chapitre-v1.png" alt="Partager un chapitre et ses documents avec un collègue grâce à un lien en lecture seule." width="100%" />
-      <h3>Partager avec un collègue</h3>
-      <p>Transmettez un chapitre en lecture seule, sans partager le suivi de vos classes.</p>
+      <img src="assets/sequencia-3-deux-corriges-ia-selection-1200x627.png" alt="À partir d’un sujet d’évaluation : une correction pour les élèves et un corrigé express avec barème pour le professeur." width="100%" />
+      <h3>Créer et retoucher avec l’IA</h3>
+      <p>À partir d’un sujet, l’IA propose par exemple la correction élève et le corrigé prof avec le barème. Vous relisez et ajustez.</p>
     </td>
   </tr>
 </table>
 
-<sub>Visuels recomposés pour illustrer les usages de Séquencia. Les quiz Quizlio sont importés en HTML.</sub>
+**Et aussi :** mode projection pour la classe, quiz HTML importés depuis Quizlio, partage d’un chapitre avec un collègue en lecture seule.
+
+<sub>Visuels réalisés à partir de l’application et de son compte de démonstration.</sub>
 
 ---
 
